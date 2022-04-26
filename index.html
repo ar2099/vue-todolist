@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue-todolist</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div id="tutto">
+<!-- ANCHOR INIZIO LAVORO -->
+<h1>To do</h1>
+<div class="contenitore">
+<input type="text" id="input" placeholder="Inserisci la nuova to do" v-model="nuovaRiga"@keyup.enter="aggiunta" >
+<span id="aggiungi" @click="aggiunta()">Aggiungi</span>
+</div>
+<div class="contenitore-lista">
+    <div v-for="(riga, index) in lista" :key="index" class="riga-lista"><span @click="sbarrato(riga)" :class=" ( riga.stato == true ) ? 'sbarrato' : '' " >{{ index +1 }} - {{riga.testo}}</span> <span><i class="fa-solid fa-delete-left" @click="rimuovi(index)"></i></span></div>
+</div>
+<!-- ANCHOR FINE LAVORO -->
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+/* RESET E IMPOSTAZIONI GENERALI */
+
+* {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+
+.contenitore {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#input {
+    width: 90%;
+    height: 40px;
+    border: 1px solid rgb(193, 192, 192);
+    border-radius: 10px;
+    padding: 3px;
+}
+#input:focus {
+    outline: auto;
+    outline-color: #719ECE;
+    outline-width: 5px;
+}
+
+#aggiungi {
+    color: white;
+    background-color: black;
+    padding: 9px 15px 9px 15px;
+    border-radius: 10px;
+}
+
+.contenitore-lista {
+    width: 74%;
+    margin: 40px auto auto auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: bisque;
+    min-height: 100px;
+    padding: 20px 20px 20px 20px;
+
+}
+
+.riga-lista {
+    background-color: white;
+    padding: 15px;
+    margin: 5px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sbarrato {
+    text-decoration: line-through;
+}
